@@ -7,7 +7,6 @@
 <body>
   <h1>Comparativa de reproductores MP3</h1>
   <table border="1">
-  <caption>Tabla comparativa de las características técnicas de los reproductores MP3</caption>
   <tr>
     <th></th>
     <th abbr="Reproductor mini" scope="col" colspan="3">
