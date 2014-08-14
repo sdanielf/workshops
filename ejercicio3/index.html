@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual de GTK+ 3: GtkHSV</title>
+</head>
+<body>
+<center>
+<a href="#">Superior</a> |
+<a href="#descripcion">Descripci&oacute;n</a> |
+<a href="#jerarquia">Jerarqu&iacute;a del Objeto</a> |
+<a href="#interfaces">Interfaces implementadas</a> |
+<a href="#signals">Se&ntilde;ales</a>
+</center>
+<hr>
+<h2>GtkHSV</h1>
+<p>GtkHSV - Una "rueda de colores"</p>
+<img src="gtkhsv.png" alt="">
+<video width="500" height="auto" controls src="arduino.mp4"></video>
+<h2>Funciones</h2>
+<table>
+  <tr>
+    <td width="100px;" align="right">
+      <i><small>
+        <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html">
+          GtkWidget
+        </a> *
+      </small></i>
+    </td>
+    <td><a href="#gtk_hsv_new">gtk_hsv_new</a>
+      <i><small>()</small></i></td>
+  </tr>
+  <tr>
+    <td align="right"><i><small>void</small></i></td>
+    <td><a href="#gtk_hsv_set_color">gtk_hsv_set_color</a>
+      <i><small>()</small></i></td>
+  </tr>
+  <tr>
+    <td align="right"><i><small>void</small></i></td>
+    <td><a href="#gtk_hsv_get_color">gtk_hsv_get_color</a>
+      <i><small>()</small></i></td>
+  </tr>
+</table>
+<h2 id="signals">Se&ntilde;ales</h2>
+<table>
+  <tr>
+    <td width="100px" align="right"><small><i>void</i></small></td>
+    <td width="200px"><a href="#changed">changed</a></td>
+    <td><i>Run first</i></td>
+  </tr>
+  <tr>
+    <td align="right"><small><i>void</i></small></td>
+    <td><a href="#move">move</a></td>
+    <td><i>Action</i></td>
+  </tr>
+</table>
+<h2>Tipos y valores</h2>
+<table>
+  <tr>
+    <td width="100px" align="right"><small><i>struct</i></small></td>
+    <td><a href="#GtkHSV">GtkHSV</a></td>
+  </tr>
+</table>
+<h2 id="jerarquia">Jerarqu&iacute;a del Objeto</h2>
+<ul>
+  <li><a target="_blank" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <ul><li><a target="_blank" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+      <ul><li><a target="_blank" href="https://developer.gnome.org/gtk3/stable/GtkWidget.html">GtkWidget</a>
+        <ul><li>GtkHSV</li></ul>
+      </li></ul>
+    </li></ul>
+  </li>
+</ul>
+<h2 id="interfaces">Interfaces implementadas</h2>
+<p>GtkHSV implementa AtkImplementorIface y <a
+  href="https://developer.gnome.org/gtk3/stable/GtkBuildable.html"
+  target="_blank">GtkBuildable</a></p>
+<h2>Inclusiones</h2>
+<code>#include &lt;gtk/gtk.h&gt;</code>
+<h2 id="descripcion">Descripci&oacute;n</h2>
+<p>
+<a href="#" target="_blank">GtkHSV</a> is la parte de "rueda" del selector de
+colores. Permite seleccionar un color determinando sus componentes HSV en una
+forma intuitiva. Moviendo la selecci&oacute;n alrededor de el anillo se cambia
+el tono, y moviendo el rat&oacute;n por el tri&aacute;ngulo interior se cambia
+el valor y la saturaci&oacute;n.
+</p>
+<p>
+<a href="#" target="_blank">GtkHSV</a> se abandon&oacute; junto con el <a
+  href="https://developer.gnome.org/gtk3/stable/GtkColorSelection.html"
+  target="_blank">GtkColorSelection</a>, donde se usaba.
+</p>
+<h2>Funciones</h2>
+<h3 id="gtk_hsv_new">gtk_hsv_new ()</h3>
+<code>
+<a href="https://developer.gnome.org/gtk3/stable/GtkColorSelection.html">
+GtkWidget</a> *<br>
+gtk_hsv_new (<mark>void</mark>);
+</code>
+
+<blockquote>
+<i><mark>gtk_hsv_new</mark> est&aacute; abandonado y no deber&iacute;a
+  usarse en c&oacute;digo nuevo.</i></blockquote>
+<h4>Regresa</h4>
+<p>El reci&eacute;n creado selector de colores HSV.</p>
+<hr>
+<h3 id="gtk_hsv_set_color">gtk_hsv_set_color ()</h3>
+<code><pre>
+void
+gtk_hsv_set_color (<mark><a href="#">GtkHSV</a> *hsv</mark>,
+                   <mark>double h</mark>,
+                   <mark>double s</mark>,
+                   <mark>double v</mark>);
+</pre></code>
+
+<p>Establece el color actual en el selector de colores HSV. Los valores deben
+estar en el rango de [0.0, 1.0].</p>
+<h4>Par&aacute;metros</h4>
+<table>
+  <tr>
+    <td width="150px">hsv</td>
+    <td>Un selector de colores HSV</td>
+  </tr>
+  <tr>
+    <td>h</td>
+    <td>Hue <i>(tono)</i></td>
+  </tr>
+  <tr>
+    <td>s</td>
+    <td>Saturaci&oacute;n</td>
+  </tr>
+  <tr>
+    <td>v</td>
+    <td>Valor</td>
+  </tr>
+</table>
+<hr>
+<h3 id="gtk_hsv_get_color">gtk_hsv_get_color ()</h3>
+<code><pre>
+void
+gtk_hsv_get_color (<mark><a href="#">GtkHSV</a> *hsv</mark>,
+                   <mark><a
+ href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+ target="_blank">gdouble</a> *h</mark>,
+                   <mark><a
+ href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+ target="_blank">gdouble</a> *s</mark>,
+                   <mark><a
+ href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+ target="_blank">gdouble</a> *v</mark>);
+</pre></code>
+<p>Obtiene el color actual del selector. Los valores de retorno se encuentran
+en el rango de [0.0, 1.0].</p>
+<h4>Par&aacute;metros</h4>
+<table>
+  <tr>
+    <td width="150px">hsv</td>
+    <td>Un selector de colores HSV</td>
+  </tr>
+  <tr>
+    <td>h</td>
+    <td>Valor de retorno para el tono</td>
+  </tr>
+  <tr>
+    <td>s</td>
+    <td>Valor de retorno para la saturaci&oacute;n</td>
+  </tr>
+  <tr>
+    <td>v</td>
+    <td>Valor de retorno para el valor de color</td>
+  </tr>
+</table>
+<h2>Tipos y valores</h2>
+<h3 id="GtkHSV">struct GtkHSV</h3>
+<code>struct GtkHSV;</code>
+<h2>Detalles de las se&ntilde;ales</h2>
+<h3 id="changed">La se&ntilde;al "changed"</h3>
+<code><pre>
+void
+user_function (<a href="#">GtkHSV</a>  *hsv,
+               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+target="_blank">gpointer</a> user_data)
+</pre></code>
+<p>Flags: Run first</p>
+<hr>
+<h3 id="move">La se&ntilde;al "move"</h3>
+<code><pre>
+void
+user_function (<a href="#">GtkHSV</a>          *hsv,
+               <a
+href="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkDirectionType"
+target="_blank">GtkDirectionType</a> arg1,
+               <a
+ href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+ target="_blank">gpointer</a>         user_data)
+</pre></code>
+<p>Flags: Action</p>
+<h2>Ver tambi&eacute;n</h2>
+<a href="https://developer.gnome.org/gtk3/stable/GtkColorSelection.html"
+  target="_blank">GtkColorSelection</a>
+<a href="https://developer.gnome.org/gtk3/stable/GtkColorSelectionDialog.html"
+  target="_blank">GtkColorSelectionDialog</a>
+</body>
+</html>
