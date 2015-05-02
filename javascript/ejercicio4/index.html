@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <input type="radio" name="operacion" value="a" checked>Suma</input>
+  <input type="radio" name="operacion" value="b">Resta</input>
+  <input type="radio" name="operacion" value="c">Multiplicación</input>
+  <input type="radio" name="operacion" value="d">División</input>
+  <br>
+  <input type="number" name="operandoA">
+  <code id="operador"></code>
+  <input type="number" name="operandoB">
+  <br>
+  <button id="calcular">Calcular</button>
+  <input type="text" id="resultado" readonly>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    var operacion = '+';
+    $('input[name="operacion"]').click(function (a) {
+      var op = a.currentTarget.value;
+      if (op == 'a') {
+        operacion = '+';
+      } else if (op == 'b') {
+        operacion = '-';
+      } else if (op == 'c') {
+        operacion = '*';
+      } else {
+        operacion = '/'
+      }
+      $('#operador').text(operacion);
+    });
+    $('input[name="operacion"]')[0].click();
+    $('#calcular').click(function () {
+        var operando1 = parseInt($('input[name="operandoA"]').val());
+        var operando2 = parseInt($('input[name="operandoB"]').val());
+        var resultado;
+        if (operacion === '+') {
+          resultado = operando1 + operando2; 
+        } else if (operacion === '-') {
+          resultado = operando1 - operando2;
+        } else if (operacion === '*') {
+          resultado = operando1 * operando2;
+        } else {
+          resultado = operando1 / operando2;
+        }
+
+        if (isNaN(resultado) || resultado === Infinity) { resultado = 'Error'; }
+        $('#resultado').val(resultado);
+    });
+  </script>
+</body>
+</html>

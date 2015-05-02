@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+  <style>
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://sdanielf.github.io/workshops">Daniel Francis</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../">Principal</a></li>
+          <li><a href="../javascript">JavaScript</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="starter-template">
+      <h1>Ejercicio 3</h1>
+    </div>
+<p>
+Escribir un programa que solicite dos números, para luego realizar una división entre ellos y mostrar el resultado.
+</p>
+
+<ul>
+  <li>Si el denominador es 0 no realizar la división</li>
+  <li>Si alguno de los valores no se puede covertir a número mostrar un error
+  <ul>
+    <li>Pista: probar en consola qué devuelve parseInt cuando no logra generar un número</li>
+  </ul>
+  </li>
+</ul>
+
+<h2>Solución</h2>
+<button class="btn btn-primary" onclick="division();">Ejecutar</button>
+<a href="solucion.js"><button class="btn btn-danger">Descargar</button></a>
+</div>
+<script src="solucion.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
