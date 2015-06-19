@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taller de Mantenimiento II - Daniel Francis</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://sdanielf.github.io/">Daniel Francis</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../">Principal</a></li>
+          <li><a href="../">Taller de Mantenimiento II</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="starter-template">
+      <h1>Medios de comunicación cerrados</h1>
+    </div>
+
+    <p class="lead">
+    <ol>
+      <li><a href="#cap1">Introducción al tema redes</a>
+        <ol>
+          <li><a href="#cap1_1">Medio de comunicación</a></li>
+          <li><a href="#cap1_2">Tasas de transferencia</a></li>
+          <li><a href="#cap1_3">Alternativas al uso de redes</a></li>
+        </ol>
+      </li>
+      <li><a href="#cap2">Cables coaxiales</a></li>
+      <li><a href="#cap3">Pares trenzados, cables UTP y STP</a></li>
+      <li><a href="#cap4">Fibra óptica</a></li>
+    </ol>
+    </p>
+
+    <h2 id="cap1">1 - Introducción al tema redes</h2>
+    <h3 id="cap1_1">1.1 - Medio de comunicación</h3>
+    <ul>
+      <li><b>Emisor</b> es quien envía un mensaje</li>
+      <li><b>Receptor</b> es quien se le envía mensaje (quien lo recibe)</li>
+      <li><b>Canal</b> es el medio físico por el cual se transmite el mensaje</li>
+      <li><b>Código</b> es la forma que toma el mensaje mientras es transmitido por el canal</li>
+      <li><b>Retroalimentación</b> es un proceso en el que el emisor y el receptor intercambian sus roles.</li>
+    </ul>
+    <p>
+    Los medios de comunicación se clasifican de acuerdo a los roles que pueden tomar las partes.
+    </p>
+    <h4>Full-duplex</h4>
+    <img src="fullduplex.jpg">
+    <h4>Half-duplex</h4>
+    <img src="half-duplex.jpg" />
+    <h4>Simplex</h4>
+    <img src="simplex.jpg" />
+    <h3 id="cap1_2">1.2 - Tasas de transferencia</h3>  
+    <p>A la tasa de transferencia se le conoce vulgarmente como velocidad subida o descarga.
+    Dado que velocidad es una magnitud física resultado de dividir desplazamiento entre
+    tiempo transcurrido, se le da el nombre tasa de transferencia al resultado
+    de dividir la cantidad de datos transmitidos entre el tiempo transcurrido.
+    </p>
+    <h4>Ejemplo</h4>
+    Se descarga 1GB, en una hora.
+    <p>
+    1 GB es la cantidad de datos transmitidos y 1 hora es la tiempo que demora en transmitirse.<br>
+    Si bien es correcto decir que la descarga se realizó a 1GB/h, para facilitar la comparación
+    entre tasas de transferencia, se usan mayormente las unidades sobre segundos.
+    </p>
+    <ul>
+      <li>Como una hora son 60 minutos, y un minuto son 60 segundos, una hora son 3600 segundos.</li>
+      <li>1GB son 1024MB, si en una hora se descargaron 1024 MB, en un minuto se descargaron 17MB.</li>
+      <math>
+        <mfrac>
+        <mrow><mn>1024</mn><mfrac bevelled="true"><mi>MB</mi><mi>h</mi></mfrac></mrow>
+        <mrow><mn>60</mn><mi>min</mi></mrow>
+        </mfrac>
+        <mo>=</mo> <mn>17</mn><mfrac bevelled="true"><mi>MB</mi><mi>min</mi></mfrac>
+      </math>
+      <li>1MB son 1024KB, entonces 17MB son 17408KB</li>
+      <li>Si en un minuto se descagan 17408KB, en un segundo se descargan 290KB</li>
+      <math>
+        <mfrac>
+        <mrow><mn>17408</mn><mfrac bevelled="true"><mi>KB</mi><mi>min</mi></mrow>
+        <mrow><mn>60</mn><mi>s</mi></mrow>
+        </mfrac>
+        <mo>=</mo> <mn>290</mn> <mfrac bevelled="true"><mi>KB</mi><mi>s</mi></mfrac>
+      </math>
+    </ul>
+    <p>
+    <h3 id="cap1_3">1.3 Alternativas al uso de redes</h3>
+    Existen medios de transferencia alternativos a una red como son el uso de medios
+    de almacenamiento externos (discos externos, pendrives, tarjetas SD, etc). Al depender
+    de la acción del usuario, el tiempo que se demora en hacer una transferencia de esta
+    forma es siempre mayor o igual a medio minuto. Resulta eficiente el uso de estos para
+    enviar paquetes grandes de información a velocidades muy grandes, mientras que las redes
+    son eficientes para transmitir paquetes de menor tamaño en tiempo real.
+    </p>
+    <h2 id="cap2">2 - Cables coaxiales</h2>
+    <h2 id="cap3">3 - Pares trenzados, cables UTP y STP</h2>
+    <h2 id="cap4">4 - Fibra óptica</h2>
+
+  </div><!-- /.container -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

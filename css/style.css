@@ -1,0 +1,21 @@
+body {
+  padding-top: 50px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+ol {
+  counter-reset: item
+}
+
+ol li {
+  display: block
+}
+
+ol li:before {
+  content: counters(item, ".")" - ";
+  counter-increment: item
+}
